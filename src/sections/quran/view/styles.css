@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "KGFQFont";
+  src: url("../../../../public/fonts/KFGQPC_Uthman_Taha_Naskh_Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.arabicAyah {
+  font-family: KGFQFont;
+}
+
+.player {
+  box-shadow: 0 4px 34px rgba(0, 0, 0, 0.15);
+}

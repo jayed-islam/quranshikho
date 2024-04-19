@@ -2,32 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+::-webkit-scrollbar {
+  width: 9px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+  /* background: #f1f1f1; */
+  background: #fff;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.enroll-now-button {
+  background: linear-gradient(45deg, #008080 30%, #00ced1 90%);
+}
+
+.gradient-text-color {
+  background: linear-gradient(45deg, #008080 30%, #00ced1 90%);
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Make the text transparent */
+}
+
+.article-container {
+  overflow: hidden;
+  border-radius: 20px; /* Adjust as needed */
+  transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
+}
+
+.article-container:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Apply shadow on hover */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.custom-editor {
+  height: 400px;
+  border-radius: 50px;
+}
+
+.custom-editor .ql-toolbar {
+  background-color: #f3f3f3; /* Set toolbar background color */
+}
+
+.button-style {
+  background: var(
+    --Gradient-Primary,
+    linear-gradient(135deg, #5be584 0%, #00ab55 100%)
+  );
+}
+
+html {
+  scroll-behavior: smooth;
 }
